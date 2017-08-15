@@ -17,7 +17,7 @@ public class NotaController {
 		this.notaRepository = notaRepository;
 	}
 	
-	@GetMapping(value = "")
+	@GetMapping
 	public List<Nota> findAll() {
 		return notaRepository.findAll();
 	}
@@ -27,7 +27,7 @@ public class NotaController {
 		return notaRepository.findByTitulo(titulo);
 	}
 	
-	@PostMapping(value = "")
+	@PostMapping
 	public void save(@RequestBody Nota nota) {
 		notaRepository.save(nota);
 	}
